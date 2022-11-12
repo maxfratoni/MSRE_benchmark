@@ -1,0 +1,245 @@
+% MSRE first criticality benchmark
+% Created by Dan Shen and Massimiliano Fratoni, University of California, Berkeley
+% Reference: D. Shen, G. Ilas, J. J. Powers, and M. Fratoni, “Reactor physics benchmark of the first criticality in the Molten Salt Reactor Experiment,” Nuclear Science and Engineering, 2021.
+% Not for further distribution without consent of the authors
+% For any question contact maxfratoni@berkeley.edu
+
+% --- full graphite region, universe = f
+cell f1 f graphite    -31
+cell f2 f salt         31
+
+
+% --- missing the top channel, universe = m-t
+cell m-t100 m-t graphite     35 -34  33 -32
+cell m-t101 m-t graphite    -bar -35  42  54
+cell m-t102 m-t graphite    -bar -35  43 -53
+cell m-t103 m-t salt        -42 -bar  54
+cell m-t104 m-t salt        -43 -bar -53
+cell m-t105 m-t salt        -bar -35  53 -54
+
+cell m-t106 m-t graphite    -bar  34  40  54
+cell m-t107 m-t graphite    -bar  34  41 -53
+cell m-t108 m-t salt        -40 -bar  54
+cell m-t109 m-t salt        -41 -bar -53
+cell m-t110 m-t salt        -bar  34  53 -54
+
+cell m-t111 m-t graphite     35 -34  32 -bar 
+
+cell m-t116 m-t graphite     35 -51 -33 -bar 38
+cell m-t117 m-t graphite     52 -34 -33 -bar 39
+cell m-t118 m-t salt         51 -52 -33 -bar
+cell m-t119 m-t salt        -38 -bar -51
+cell m-t120 m-t salt        -39 -bar  52
+cell m-t121 m-t salt     bar
+
+% ---- missing the bottom channel, universe = m-b
+cell m-b100 m-b graphite     35 -34  33 -32
+cell m-b101 m-b graphite    -bar -35  42  54
+cell m-b102 m-b graphite    -bar -35  43 -53
+cell m-b103 m-b salt        -42 -bar  54
+cell m-b104 m-b salt        -43 -bar -53
+cell m-b105 m-b salt        -bar -35  53 -54
+
+cell m-b106 m-b graphite    -bar  34  40  54
+cell m-b107 m-b graphite    -bar  34  41 -53
+cell m-b108 m-b salt        -40 -bar  54
+cell m-b109 m-b salt        -41 -bar -53
+cell m-b110 m-b salt        -bar  34  53 -54
+
+cell m-b111 m-b graphite     35 -51  32 -bar 36
+cell m-b112 m-b graphite     52 -34  32 -bar 37
+cell m-b113 m-b salt         51 -52  32 -bar
+cell m-b114 m-b salt        -36 -bar -51
+cell m-b115 m-b salt        -37 -bar  52
+
+cell m-b116 m-b graphite     35 -34 -33 -bar 
+cell m-b121 m-b salt     bar
+
+
+% --- missing the left channel, universe = m-l
+cell m-l100 m-l graphite     35 -34  33 -32
+cell m-l101 m-l graphite    -bar -35  
+
+cell m-l106 m-l graphite    -bar  34  40  54
+cell m-l107 m-l graphite    -bar  34  41 -53
+cell m-l108 m-l salt        -40 -bar  54
+cell m-l109 m-l salt        -41 -bar -53
+cell m-l110 m-l salt        -bar  34  53 -54
+
+cell m-l111 m-l graphite     35 -51  32 -bar 36
+cell m-l112 m-l graphite     52 -34  32 -bar 37
+cell m-l113 m-l salt         51 -52  32 -bar
+cell m-l114 m-l salt        -36 -bar -51
+cell m-l115 m-l salt        -37 -bar  52
+
+cell m-l116 m-l graphite     35 -51 -33 -bar 38
+cell m-l117 m-l graphite     52 -34 -33 -bar 39
+cell m-l118 m-l salt         51 -52 -33 -bar
+cell m-l119 m-l salt        -38 -bar -51
+cell m-l120 m-l salt        -39 -bar  52
+cell m-l121 m-l salt     bar
+
+% --- missing the right channel, universe = m-r
+cell m-r100 m-r graphite     35 -34  33 -32
+cell m-r101 m-r graphite    -bar -35  42  54
+cell m-r102 m-r graphite    -bar -35  43 -53
+cell m-r103 m-r salt        -42 -bar  54
+cell m-r104 m-r salt        -43 -bar -53
+cell m-r105 m-r salt        -bar -35  53 -54
+
+cell m-r106 m-r graphite    -bar  34  
+
+cell m-r111 m-r graphite     35 -51  32 -bar 36
+cell m-r112 m-r graphite     52 -34  32 -bar 37
+cell m-r113 m-r salt         51 -52  32 -bar
+cell m-r114 m-r salt        -36 -bar -51
+cell m-r115 m-r salt        -37 -bar  52
+
+cell m-r116 m-r graphite     35 -51 -33 -bar 38
+cell m-r117 m-r graphite     52 -34 -33 -bar 39
+cell m-r118 m-r salt         51 -52 -33 -bar
+cell m-r119 m-r salt        -38 -bar -51
+cell m-r120 m-r salt        -39 -bar  52
+cell m-r121 m-r salt     bar
+
+% --- missing the top and left channel, universe = m-t-l
+cell m-t-l100 m-t-l graphite     35 -34  33 -32
+cell m-t-l101 m-t-l graphite    -bar -35  
+
+cell m-t-l106 m-t-l graphite    -bar  34  40  54
+cell m-t-l107 m-t-l graphite    -bar  34  41 -53
+cell m-t-l108 m-t-l salt        -40 -bar  54
+cell m-t-l109 m-t-l salt        -41 -bar -53
+cell m-t-l110 m-t-l salt        -bar  34  53 -54
+
+cell m-t-l111 m-t-l graphite     35 -34  32 -bar
+
+cell m-t-l116 m-t-l graphite     35 -51 -33 -bar 38
+cell m-t-l117 m-t-l graphite     52 -34 -33 -bar 39
+cell m-t-l118 m-t-l salt         51 -52 -33 -bar
+cell m-t-l119 m-t-l salt        -38 -bar -51
+cell m-t-l120 m-t-l salt        -39 -bar  52
+
+cell m-t-l121 m-t-l salt     bar
+
+% --- missing the top and right channel, universe = m-t-r
+cell m-t-r100 m-t-r graphite     35 -34  33 -32
+
+cell m-t-r101 m-t-r graphite    -bar -35  42  54
+cell m-t-r102 m-t-r graphite    -bar -35  43 -53
+cell m-t-r103 m-t-r salt        -42 -bar  54
+cell m-t-r104 m-t-r salt        -43 -bar -53
+cell m-t-r105 m-t-r salt        -bar -35  53 -54
+
+cell m-t-r106 m-t-r graphite    -bar  34  
+cell m-t-r111 m-t-r graphite     35 -34  32 -bar
+
+cell m-t-r116 m-t-r graphite     35 -51 -33 -bar 38
+cell m-t-r117 m-t-r graphite     52 -34 -33 -bar 39
+cell m-t-r118 m-t-r salt         51 -52 -33 -bar
+cell m-t-r119 m-t-r salt        -38 -bar -51
+cell m-t-r120 m-t-r salt        -39 -bar  52
+
+cell m-t-r121 m-t-r salt     bar
+
+% --- only the bottom channel, universe = o-b
+cell o-b100 o-b graphite     35 -34  33 -32
+cell o-b101 o-b graphite    -bar -35
+
+cell o-b106 o-b graphite    -bar  34  
+
+cell o-b111 o-b graphite     35 -34  32 -bar
+
+cell o-b116 o-b graphite     35 -51 -33 -bar 38
+cell o-b117 o-b graphite     52 -34 -33 -bar 39
+cell o-b118 o-b salt         51 -52 -33 -bar
+cell o-b119 o-b salt        -38 -bar -51
+cell o-b120 o-b salt        -39 -bar  52
+
+cell o-b121 o-b salt     bar
+
+% --- only the right channel, universe = o-r
+cell o-r100 o-r graphite     35 -34  33 -32
+cell o-r101 o-r graphite    -bar -35
+
+cell o-r106 o-r graphite    -bar  34  40  54
+cell o-r107 o-r graphite    -bar  34  41 -53
+cell o-r108 o-r salt        -40 -bar  54
+cell o-r109 o-r salt        -41 -bar -53
+cell o-r110 o-r salt        -bar  34  53 -54
+
+cell o-r111 o-r graphite     35 -34  32 -bar
+
+cell o-r116 o-r graphite     35 -34 -33 -bar 
+cell o-r121 o-r salt     bar
+
+% --- only the left channel, universe = o-l
+cell o-l100 o-l graphite     35 -34  33 -32
+
+cell o-l101 o-l graphite    -bar -35  42  54
+cell o-l102 o-l graphite    -bar -35  43 -53
+cell o-l103 o-l salt        -42 -bar  54
+cell o-l104 o-l salt        -43 -bar -53
+cell o-l105 o-l salt        -bar -35  53 -54
+
+cell o-l106 o-l graphite    -bar  34
+cell o-l111 o-l graphite     35 -34  32 -bar
+
+cell o-l116 o-l graphite     35 -34 -33 -bar 
+
+cell o-l121 o-l salt     bar
+
+
+% --- miss the left and bottom, universe = m-l-b
+cell m-l-b100 m-l-b graphite     35 -34  33 -32
+cell m-l-b101 m-l-b graphite    -bar -35
+
+cell m-l-b106 m-l-b graphite    -bar  34  40  54
+cell m-l-b107 m-l-b graphite    -bar  34  41 -53
+cell m-l-b108 m-l-b salt        -40 -bar  54
+cell m-l-b109 m-l-b salt        -41 -bar -53
+cell m-l-b110 m-l-b salt        -bar  34  53 -54
+
+cell m-l-b111 m-l-b graphite     35 -51  32 -bar 36
+cell m-l-b112 m-l-b graphite     52 -34  32 -bar 37
+cell m-l-b113 m-l-b salt         51 -52  32 -bar
+cell m-l-b114 m-l-b salt        -36 -bar -51
+cell m-l-b115 m-l-b salt        -37 -bar  52
+
+cell m-l-b116 m-l-b graphite     35 -34 -33 -bar 
+cell m-l-b121 m-l-b salt     bar
+
+
+% --- miss the right and bottom, universe = m-r-b
+cell m-r-b100 m-r-b graphite     35 -34  33 -32
+cell m-r-b101 m-r-b graphite    -bar -35  42  54
+cell m-r-b102 m-r-b graphite    -bar -35  43 -53
+cell m-r-b103 m-r-b salt        -42 -bar  54
+cell m-r-b104 m-r-b salt        -43 -bar -53
+cell m-r-b105 m-r-b salt        -bar -35  53 -54
+
+cell m-r-b106 m-r-b graphite    -bar  34
+
+cell m-r-b111 m-r-b graphite     35 -51  32 -bar 36
+cell m-r-b112 m-r-b graphite     52 -34  32 -bar 37
+cell m-r-b113 m-r-b salt         51 -52  32 -bar
+cell m-r-b114 m-r-b salt        -36 -bar -51
+cell m-r-b115 m-r-b salt        -37 -bar  52
+
+cell m-r-b116 m-r-b graphite     35 -34 -33 -bar 
+cell m-r-b121 m-r-b salt     bar
+
+% --- only the top channel, universe = o-t
+cell o-t100 o-t graphite     35 -34  33 -32
+cell o-t101 o-t graphite    -bar -35  
+cell o-t106 o-t graphite    -bar  34
+
+cell o-t111 o-t graphite     35 -51  32 -bar 36
+cell o-t112 o-t graphite     52 -34  32 -bar 37
+cell o-t113 o-t salt         51 -52  32 -bar
+cell o-t114 o-t salt        -36 -bar -51
+cell o-t115 o-t salt        -37 -bar  52
+
+cell o-t116 o-t graphite     35 -34 -33 -bar
+cell o-t121 o-t salt     bar
+

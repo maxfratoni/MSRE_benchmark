@@ -1,0 +1,31 @@
+% MSRE first criticality benchmark
+% Created by Dan Shen and Massimiliano Fratoni, University of California, Berkeley
+% Reference: D. Shen, G. Ilas, J. J. Powers, and M. Fratoni, “Reactor physics benchmark of the first criticality in the Molten Salt Reactor Experiment,” Nuclear Science and Engineering, 2021.
+% Not for further distribution without consent of the authors
+% For any question contact maxfratoni@berkeley.edu
+
+% no space between vertical graphite lattice 
+
+surf 31   sqc 0 0 2.54177       % expand from 2.53746
+surf bar  sqc 0 0 2.54177       % actual size of the bar after expansion, change this value only
+
+surf 32 py      2.03291
+surf 33 py     -2.03291
+surf 34 px      2.03291
+surf 35 px     -2.03291
+
+surf 36 cyl    -1.01773  2.54177 0.50886
+surf 37 cyl     1.01773  2.54177 0.50886
+surf 38 cyl    -1.01773 -2.54177 0.50886
+surf 39 cyl     1.01773 -2.54177 0.50886
+
+surf 40 cyl     2.54177  1.01773 0.50886
+surf 41 cyl     2.54177 -1.01773 0.50886
+surf 42 cyl    -2.54177  1.01773 0.50886
+surf 43 cyl    -2.54177 -1.01773 0.50886
+
+surf 51 px     -1.01773
+surf 52 px      1.01773
+surf 53 py     -1.01773
+surf 54 py      1.01773
+

@@ -1,0 +1,266 @@
+% MSRE first criticality benchmark
+% Created by Dan Shen and Massimiliano Fratoni, University of California, Berkeley
+% Reference: D. Shen, G. Ilas, J. J. Powers, and M. Fratoni, “Reactor physics benchmark of the first criticality in the Molten Salt Reactor Experiment,” Nuclear Science and Engineering, 2021.
+% Not for further distribution without consent of the authors
+% For any question contact maxfratoni@berkeley.edu
+
+% special lattice in the center region
+surf 650 cyl  5.08354 0  3.1993
+surf 651 cyl -5.08354 0  3.1993
+surf 652 cyl  0  5.08354 3.1993
+surf 653 cyl  0 -5.08354 3.1993
+
+% Section in between control rod, type 60, universe = 60
+
+cell 600 60 graphite   -31  33 -32   650  651
+cell 612 60 salt       -31  33 -32  -650
+cell 613 60 salt       -31  33 -32  -651
+
+
+cell 601 60 graphite   -31 -51  32  36
+cell 602 60 graphite   -31  52  32  37
+cell 603 60 salt         51 -52  32 -31
+cell 604 60 salt        -36 -31 -51
+cell 605 60 salt        -37 -31  52
+
+cell 606 60 graphite   -31  -51 -33  38
+cell 607 60 graphite   -31  52  -33  39
+cell 608 60 salt         51 -52 -33 -31
+cell 609 60 salt        -38 -31 -51
+cell 610 60 salt        -39 -31  52
+
+cell 611 60 salt      31
+
+% type 61, universe = 61
+
+cell 614 61 graphite   -31  35 -34   652  653
+cell 615 61 salt       -31  35 -34  -652
+cell 616 61 salt       -31  35 -34  -653
+
+
+cell 617 61 graphite   -31 -35  54  42
+cell 618 61 graphite   -31 -35 -53  43
+cell 619 61 salt       -42 -31  54
+cell 620 61 salt       -43 -31 -53
+cell 621 61 salt       -31 -35  53 -54
+
+cell 622 61 graphite   -31  34  40  54
+cell 623 61 graphite   -31  34  41 -53
+cell 624 61 salt        -40 -31  54
+cell 625 61 salt        -41 -31 -53
+cell 626 61 salt        -31  34  53 -54
+
+cell 627 61 salt        31
+
+% left to control rod, universe = 100
+
+cell 628 100 graphite   -31  33 -32   650  35
+cell 754 100 graphite   -31  54 -32  -35   42
+cell 755 100 graphite   -31 -53  33  -35   43
+cell 756 100 salt       -31  54 -42
+cell 757 100 salt       -31 -53 -43
+cell 758 100 salt       -31  53 -54  -35 
+cell 629 100 salt       -31  33 -32  -650
+
+cell 631 100 graphite   -31 -51  32  36
+cell 632 100 graphite   -31  52  32  37
+cell 633 100 salt         51 -52  32 -31
+cell 634 100 salt        -36 -31 -51
+cell 635 100 salt        -37 -31  52
+
+cell 636 100 graphite   -31  -51 -33  38
+cell 637 100 graphite   -31  52  -33  39
+cell 638 100 salt         51 -52 -33 -31
+cell 639 100 salt        -38 -31 -51
+cell 640 100 salt        -39 -31  52
+
+cell 641 100 salt      31
+
+% right to control rod, universe = 101
+
+cell 642 101 graphite   -31  33 -32   651  -34
+cell 759 101 graphite   -31  54 -32    40   34
+cell 760 101 graphite   -31  33 -53    41   34
+cell 761 101 salt       -31 -40  54
+cell 762 101 salt       -31 -41 -53
+cell 763 101 salt       -31  34  53  -54
+cell 643 101 salt       -31  33 -32  -651
+
+cell 644 101 graphite   -31 -51  32  36
+cell 645 101 graphite   -31  52  32  37
+cell 646 101 salt         51 -52  32 -31
+cell 647 101 salt        -36 -31 -51
+cell 648 101 salt        -37 -31  52
+
+cell 649 101 graphite   -31  -51 -33  38
+cell 650 101 graphite   -31  52  -33  39
+cell 651 101 salt         51 -52 -33 -31
+cell 652 101 salt        -38 -31 -51
+cell 653 101 salt        -39 -31  52
+
+cell 654 101 salt      31
+
+% above control rod, universe = 590
+
+cell 655 590 graphite   -31  35 -34   653 -32
+cell 769 590 graphite   -31  32  35 -51 36
+cell 770 590 graphite   -31  32  52 -34 37
+cell 771 590 salt       -31 -36  -51
+cell 772 590 salt       -31 -37   52
+cell 773 590 salt       -31  32  51 -52
+cell 656 590 salt       -31  35 -34  -653
+
+
+cell 657 590 graphite   -31 -35  54  42
+cell 658 590 graphite   -31 -35 -53  43
+cell 659 590 salt       -42 -31  54
+cell 660 590 salt       -43 -31 -53
+cell 661 590 salt       -31 -35  53 -54
+
+cell 662 590 graphite   -31  34  40  54
+cell 663 590 graphite   -31  34  41 -53
+cell 664 590 salt        -40 -31  54
+cell 665 590 salt        -41 -31 -53
+cell 666 590 salt        -31  34  53 -54
+
+cell 667 590 salt        31
+
+% below control rod, universe = 591
+
+cell 668 591 graphite   -31  35 -34   652 33
+cell 774 591 graphite   -31  35 -51   38 -33
+cell 775 591 graphite   -31 -34  52   39 -33
+cell 776 591 salt       -31 -38 -51
+cell 777 591 salt       -31 -39  52
+cell 778 591 salt       -31  51 -52  -33
+
+
+cell 669 591 salt       -31  35 -34  -652
+
+cell 670 591 graphite   -31 -35  54  42
+cell 671 591 graphite   -31 -35 -53  43
+cell 672 591 salt       -42 -31  54
+cell 673 591 salt       -43 -31 -53
+cell 674 591 salt       -31 -35  53 -54
+
+cell 675 591 graphite   -31  34  40  54
+cell 676 591 graphite   -31  34  41 -53
+cell 677 591 salt        -40 -31  54
+cell 678 591 salt        -41 -31 -53
+cell 679 591 salt        -31  34  53 -54
+
+cell 680 591 salt        31
+
+% left to sample basket, universe = 71
+
+
+cell 690 71 graphite   -31  33 -32   650   651
+cell 691 71 salt       -31  33 -32  -650   700
+cell 692 71 INOR       -31   701 -700
+cell 693 71 salt       -31  -701   75
+cell 706 71 salt       -31  -701  -76
+cell 707 71 INOR       -31  -701   76 -75
+cell 694 71 salt       -31  33 -32  -651
+
+
+cell 695 71 graphite   -31 -51  32  36
+cell 696 71 graphite   -31  52  32  37
+cell 697 71 salt         51 -52  32 -31
+cell 698 71 salt        -36 -31 -51
+cell 699 71 salt        -37 -31  52
+
+cell 700 71 graphite   -31  -51 -33  38
+cell 701 71 graphite   -31  52  -33  39
+cell 702 71 salt         51 -52 -33 -31
+cell 703 71 salt        -38 -31 -51
+cell 704 71 salt        -39 -31  52
+cell 705 71 salt      31
+
+% above sample basket, universe = 72
+
+
+cell 722 72 graphite   -31  35 -34   653   652
+cell 723 72 salt       -31  35 -34  -652
+cell 708 72 salt       -31  35 -34  -653   702
+cell 709 72 INOR       -31  -702 703
+cell 710 72 salt       -31      -703 -6051
+cell 7101 72 salt      -31      -703  6201 6051
+cell 7102 72 graphite  -31      6051 -6201 -703
+
+
+cell 711 72 graphite   -31 -35  54  42
+cell 712 72 graphite   -31 -35 -53  43
+cell 713 72 salt       -42 -31  54
+cell 714 72 salt       -43 -31 -53
+cell 715 72 salt       -31 -35  53 -54
+
+cell 716 72 graphite   -31  34  40  54
+cell 717 72 graphite   -31  34  41 -53
+cell 718 72 salt        -40 -31  54
+cell 719 72 salt        -41 -31 -53
+cell 720 72 salt        -31  34  53 -54
+cell 721 72 salt        31
+
+% right to sample basket, universe = 73
+
+
+cell 724 73 graphite   -31  33 -32   651  -34
+
+cell 764 73 graphite   -31  54 -32    40   34
+cell 765 73 graphite   -31  33 -53    41   34
+cell 766 73 salt       -31 -40  54
+cell 767 73 salt       -31 -41 -53
+cell 768 73 salt       -31  34  53  -54
+
+cell 725 73 salt       -31  33 -32  -651 704
+cell 726 73 INOR       -31 -704 705
+cell 727 73 salt       -31     -705
+
+
+
+
+cell 728 73 graphite   -31 -51  32  36
+cell 729 73 graphite   -31  52  32  37
+cell 730 73 salt         51 -52  32 -31
+cell 731 73 salt        -36 -31 -51
+cell 732 73 salt        -37 -31  52
+
+cell 733 73 graphite   -31  -51 -33  38
+cell 734 73 graphite   -31  52  -33  39
+cell 735 73 salt         51 -52 -33 -31
+cell 736 73 salt        -38 -31 -51
+cell 737 73 salt        -39 -31  52
+
+cell 738 73 salt      31
+
+% below sample basket, universe = 74
+
+
+
+cell 739 74 graphite   -31  35 -34   652  33
+
+cell 779 74 graphite   -31  35 -51   38 -33
+cell 780 74 graphite   -31 -34  52   39 -33
+cell 781 74 salt       -31 -38 -51
+cell 782 74 salt       -31 -39  52
+cell 783 74 salt       -31  51 -52  -33
+
+cell 740 74 salt       -31  35 -34  -652  706
+cell 741 74 INOR       -31  707 -706
+cell 742 74 salt       -31      -707 -6091
+cell 7421 74 salt      -31      -707  6071
+cell 7422 74 graphite  -31      -707  6091 -6071
+
+cell 743 74 graphite   -31 -35  54  42
+cell 744 74 graphite   -31 -35 -53  43
+cell 745 74 salt       -42 -31  54
+cell 746 74 salt       -43 -31 -53
+cell 747 74 salt       -31 -35  53 -54
+
+cell 748 74 graphite   -31  34  40  54
+cell 749 74 graphite   -31  34  41 -53
+cell 750 74 salt        -40 -31  54
+cell 751 74 salt        -41 -31 -53
+cell 752 74 salt        -31  34  53 -54
+cell 753 74 salt        31
+
